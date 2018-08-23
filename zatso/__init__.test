@@ -1,0 +1,5 @@
+The zatso package
+=========================
+
+    >>> import zatso
+    >>> assert '䷃ ZatSo' in zatso.__doc__

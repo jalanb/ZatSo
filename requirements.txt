@@ -1,0 +1,12 @@
+bumpversion
+ipython
+pudb
+pym
+pysyte
+pytest
+requests
+sh
+spacy
+tatsu
+virtualenv
+virtualenvwrapper
