@@ -2,4 +2,4 @@ The zatso package
 =========================
 
     >>> import zatso
-    >>> assert '䷃ ZatSo' in zatso.__doc__
+    >>> assert '䷃ ZatSo reads 竜 TatSu' in zatso.__doc__
