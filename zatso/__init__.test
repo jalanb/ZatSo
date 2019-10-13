@@ -3,3 +3,6 @@ The zatso package
 
     >>> import zatso
     >>> assert '䷃ ZatSo reads 竜 TatSu' in zatso.__doc__
+
+    >>> zatso_ = zatso.python.read(zatso.__file__)
+    >>> assert isinstance(zatso_, zatso.TatSu)
