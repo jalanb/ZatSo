@@ -1,0 +1,6 @@
+pym
+pysyte
+requests
+sh
+spacy
+tatsu
