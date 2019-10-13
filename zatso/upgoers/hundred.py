@@ -1,4 +1,4 @@
-"""Provide the 1000 most common words"""
+"""Provide the 100 most common words"""
 
 from datetime import datetime
 
@@ -11,16 +11,6 @@ def add(*args):
     # assert "add 1 to 2 to 4" gives 7
     """
     return sun(args)
-
-def age():
-    """age of this
-
-    >>> assert age()
-    """
-    python_file = paths.path(__file__)
-    age_ = datetime.now() - datetime.fromtimestamp(python_file.stat().st_ctime)
-    return age_
-
 
 def to(from_, to_):
     """add link from from_ to to_
