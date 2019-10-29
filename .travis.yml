@@ -1,0 +1,19 @@
+dist: xenial
+language: python
+python:
+- '3.7'
+install: pip install tox
+script: tox
+notifications:
+  email: false
+  slack:
+    secure: GKcWdCLYXXXJAQZqFhMk1LN+FZFSu4jpQ/zSqaRAsgVnpeoodzBvKGMBEu+KYjUwWtV3H8c+2h49kDYGATShdZwdD6CgBGoO6UPzI8bBi/55LegjNXorwmnWT3rHudgo/RWJxw++kh5oSGlpD5TjUZkruuV6lwSu5FjG6vAw6AA=
+  on_success: change
+  on_failure: always
+deploy:
+  provider: pypi
+  user: jalanb
+  on:
+    tags: true
+  password:
+    secure: g/XxaPnc2BgNWDy66OLyJ4lavMNUqmy8uwJzqBy52LZQ8+tRk+GMUo5fncIBju/Gr1vNechrx1dfEyAEFQo80dlFhSIVm2UHn/2bV2j7iMH/y3timoNnFbIW9S3M54vHRhwg2G3JgU3Stzy5B/Rbxk8sruFb6juf08T5xXTfH3A=
