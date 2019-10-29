@@ -1,0 +1,19 @@
+Testing the ten most common words
+=================================
+
+    >>> import ten
+    >>> assert '10 most' in ten._doc__
+
+10 words
+--------
+
+The 10 most common words in Englishy are
+    the, of, and, a, to, in, is, you, that, it,
+
+These words are made available as functions in the module
+
+    >>> assert ten.is(ten.to(1), 1)
+
+And words in tests
+
+    >>> to 1 is 1

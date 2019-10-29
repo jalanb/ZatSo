@@ -5,35 +5,35 @@ from .one import the
 def of(x, y):
     return getattr(y, x, None)
 
-globals()['and'] = lambda x, y: x and y
-
+and = lambda x, y: x and y
 
 a = the
 
 def to(x):
-    pass
+    to_ = getattr(x, 'to', lambda y: y)
+    return to_(x)
 
-globals()['in'] = lambda x, y: x in y
+in = lambda x, y: x in y
 
-
-def is():
-    pass
+def is(x, y):
+    return x == y
 
 
 def you():
-    pass
+    raise NotImplementedError
 
 
-def that():
-    pass
+def that(x):
+    return x
 
 
 def it():
-    pass
+    return True
 
 
 with open('ten.txt') as stream:
     words = [l for l in stream.read().splitlines() if l and l[0] != '#']
 
 def has(word):
+    assert word in globals()
     return word in words
