@@ -1,20 +1,23 @@
 THE PARTS OF ENGLISHY SPEECH
 
-There are nine parts of speech in the Englishy language: 
+There are nine parts of Englishy speech
     noun
-    pronoun
+        pronoun
+        adjective
     verb
-    adjective
-    adverb
+        adverb
     preposition
     conjunction
     interjection
 
-Parts of speech are named with Englishy words
+Assert that Englishy text can be read as parts of speech 
+    with all parts named as Englishy words
 
-The part of speech indicates how the word functions in meaning as well as grammatically within the sentence.
+Assert that parts of speech function grammatically within the sentence.
 
-An individual word can function as more than one part of speech when used in different circumstances.
+The word functions as a meaning. 
+
+An individual word can function as more than one word when used in different circumstances.
 
 Understanding parts of speech is essential for determining the correct definition of a word when using the dictionary.
 
