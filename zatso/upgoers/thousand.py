@@ -42,13 +42,6 @@ def today(sought=None):
     d = datetime.today()
     word = d.strftime("%A").lower()
     seek = sought.lower() if sought else ''
-    if seek and seek[0] in 'mtwfs'
+    if seek and seek[0] in 'mtwfs':
         return seek == word
     return word
-
-
-with open('words.txt') as stream:
-    words = [l for l in stream.read().splitlines() if l and l[0] != '#']
-
-def has(word):
-    return word in words
