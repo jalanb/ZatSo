@@ -1,17 +1,50 @@
-TIP Sheet
 THE EIGHT PARTS OF SPEECH
 
-There are eight parts of speech in the English language: noun, pronoun, verb, adjective, adverb, preposition, conjunction, and interjection. The part of speech indicates how the word functions in meaning as well as grammatically within the sentence. An individual word can function as more than one part of speech when used in different circumstances. Understanding parts of speech is essential for determining the correct definition of a word when using the dictionary.
+There are nine parts of speech in the Englishy language: 
+    noun
+    pronoun
+    verb
+    adjective
+    adverb
+    preposition
+    conjunction
+    interjection
+
+Parts of speech are named
+    Names are Englishy words
+
+The part of speech indicates how the word functions in meaning as well as grammatically within the sentence.
+
+An individual word can function as more than one part of speech when used in different circumstances.
+
+Understanding parts of speech is essential for determining the correct definition of a word when using the dictionary.
 
 1. NOUN
 
     A noun is the name of a person, place, thing, or idea.
+    A name is an Englishy name for a noun
 
-man... Butte College... house... happiness
+e.g.
+    man
+    Butte College
+    house
+    happiness
 
-A noun is a word for a person, place, thing, or idea. Nouns are often used with an article (the, a, an), but not always. Proper nouns always start with a capital letter; common nouns do not. Nouns can be singular or plural, concrete or abstract. Nouns show possession by adding 's. Nouns can function in different roles within a sentence; for example, a noun can be a subject, direct object, indirect object, subject complement, or object of a preposition.
+A noun is a word for a person, place, thing, or idea.
 
-The young girl brought me a very long letter from the teacher, and then she quickly disappeared. Oh my!
+Nouns are often used with an article (the, a, an), but not always.
+
+Proper nouns always start with a capital letter; common nouns do not.
+
+Nouns can be singular or plural, concrete or abstract.
+
+Nouns show possession by adding 's.
+
+Nouns can function in different roles within a sentence; for example, a noun can be a subject, direct object, indirect object, subject complement, or object of a preposition.
+
+The young girl brought me a very long letter from the teacher, and then she quickly disappeared.
+
+Oh my!
 
 See the TIP Sheet on "Nouns" for further information.
 
