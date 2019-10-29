@@ -1,0 +1,18 @@
+#! /usr/bin/env python3
+"""zat extends kat"""
+
+from pysyte.cli.main import run
+from pysyte.cli.kat import add_args as kat_args
+from pysyte.cli.kat import kat_main
+
+
+def add_args(p):
+    parser = kat_args(p)
+    return parser
+
+
+def main():
+    return kat_main()
+
+
+run(main, add_args)

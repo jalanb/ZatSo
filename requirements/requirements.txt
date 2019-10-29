@@ -1,6 +1,6 @@
 pym
 pysyte
-requests
-sh
 spacy
+spacy-readability
+spacy-wordnet
 tatsu

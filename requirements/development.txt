@@ -1,15 +1,6 @@
 bumpversion
 ipython
+pprintpp
 pudb
-pym
-pysyte
-pytest
 requests
 sh
-spacy
-tatsu
-virtualenv
-virtualenvwrapper
-spacy-readability
-textpipe
-spacy-wordnet
