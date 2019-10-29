@@ -1,8 +1,4 @@
-"""Provide the 1000 most common words"""
-
-from datetime import datetime
-
-from pysyte.types import paths
+"""Provide the 1 most common words"""
 
 def the(*args, **kwargs):
     """the thing in the args
@@ -18,10 +14,3 @@ def the(*args, **kwargs):
         thes = [_ for _ in args if getattr(_, 'name', '') == 'the']
         the_ = thes[0] if thes else the_
     return the_.name
-
-lines = paths.path(__file__)
-with open('one.txt') as stream:
-    words = [l for l in stream.read().splitlines() if l and l[0] != '#']
-
-def has(word):
-    return word in words

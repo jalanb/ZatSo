@@ -29,11 +29,3 @@ def that(x):
 
 def it():
     return True
-
-
-with open('ten.txt') as stream:
-    words = [l for l in stream.read().splitlines() if l and l[0] != '#']
-
-def has(word):
-    assert word in globals()
-    return word in words

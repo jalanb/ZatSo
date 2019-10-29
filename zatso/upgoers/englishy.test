@@ -1,0 +1,16 @@
+Most common english words
+=========================
+
+    >>> from zatso.upgoers.englishy import words
+
+the
+---
+
+    >>> assert list(words.keys())[0] == 'the'
+    >>> assert words['the'].rank == 1
+
+    >>> assert 'dog' in words
+    >>> dog = words['dog']
+    >>> assert dog.part_of_speech == 'noun'
+    >>> assert dog.rank == 754
+

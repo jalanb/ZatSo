@@ -9,8 +9,23 @@ class Row(object):
     def __init__(self, rank,part_of_speech,frequency,dispersion):
         self.rank = int(rank)
         parts = dict(
-            c=conjunction,
-        self.part_of_speech = part_of_speech
+            a='article',
+            c='conjunction',
+            d='determiner',
+            e='unknown',
+            i='preposition',
+            j='adjective',
+            m='number',
+            n='noun',
+            p='pronoun',
+            r='adverb',
+            t='unknown',
+            u='exclamation',
+            v='verb',
+            x='not',
+        )
+        assert part_of_speech not in 'et'
+        self.part_of_speech = parts[part_of_speech]
         self.frequency = int(frequency)
         self.dispersion = float(dispersion)
 

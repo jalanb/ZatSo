@@ -1,8 +1,0 @@
-
-    >>> from zatso.upgoers import thousands
-
-    >>> assert thousands.words['the'].rank == 1
-    >>> whatever = thousands.words['whatever']
-    >>> assert whatever.rank == 777
-    >>> assert whatever.part_of_speech == 'd'
-
