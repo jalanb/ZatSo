@@ -1,4 +1,4 @@
-"""䷃ ZatSo reads 竜 TatSu objects"""
+""" ䷃  ZatSo reads 竜 TatSu objects"""
 
 from . import python
 

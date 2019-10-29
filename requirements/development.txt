@@ -10,3 +10,6 @@ spacy
 tatsu
 virtualenv
 virtualenvwrapper
+spacy-readability
+textpipe
+spacy-wordnet
