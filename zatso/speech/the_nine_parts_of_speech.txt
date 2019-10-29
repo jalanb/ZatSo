@@ -1,4 +1,4 @@
-THE EIGHT PARTS OF SPEECH
+THE PARTS OF ENGLISHY SPEECH
 
 There are nine parts of speech in the Englishy language: 
     noun
@@ -10,8 +10,7 @@ There are nine parts of speech in the Englishy language:
     conjunction
     interjection
 
-Parts of speech are named
-    Names are Englishy words
+Parts of speech are named with Englishy words
 
 The part of speech indicates how the word functions in meaning as well as grammatically within the sentence.
 
