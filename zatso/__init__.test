@@ -2,7 +2,14 @@ The zatso package
 =========================
 
     >>> import zatso
-    >>> assert '䷃ ZatSo reads 竜 TatSu' in zatso.__doc__
+    >>> assert '䷃  ZatSo reads 竜 TatSu ' in zatso.__doc__
 
-    >>> zatso_ = zatso.python.read(zatso.__file__)
-    >>> assert isinstance(zatso_, zatso.TatSu)
+    >>> from pysyte.types.paths import path
+
+    >>> path_to_zatso_python = path(zatso.__file__)
+    >>> zatso_python = zatso.python.read(path_to_zatso_python)
+    >>> assert isinstance(zatso_python, zatso.TatSu)
+
+    >>> path_to_zatso_bash = path_to_zatso_python.extend_by('.sh')
+    >>> zatso_bash = zatso.bash.read(path_to_zatso_bash)
+    >>> assert isinstance(zatso_bash, zatso.TatSu)
