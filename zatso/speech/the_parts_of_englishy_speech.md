@@ -1,56 +1,56 @@
-THE PARTS OF ENGLISHY SPEECH
+# The Parts Of Englishy Speech
 
-There are nine parts of Englishy speech
-    noun
-        pronoun
-        adjective
-    verb
-        adverb
-    preposition
-    conjunction
-    interjection
+There are nine `parts of speech`in `grammatical` `Englishy` `text`:
+- noun
+  - pronoun
+  - adjective
+- verb
+  - adverb
+- preposition
+- conjunction
+- interjection
 
-Assert that Englishy text can be read as parts of speech 
-    with all parts named as Englishy words
-
-Assert that parts of speech function grammatically within the sentence.
-
-The word functions as a meaning. 
+All `recognised` `parts` are `Englishy` `names`.
+ 
+The words function as meanings of the text. 
 
 An individual word can function as more than one word when used in different circumstances.
 
 Understanding parts of speech is essential for determining the correct definition of a word when using the dictionary.
 
-1. NOUN
+## NOUN
 
-    A noun is the name of a person, place, thing, or idea.
-    A name is an Englishy name for a noun
+### A noun is the name of a 
+    person, place, thing, or idea.
 
-e.g.
+### Examples
     man
-    Butte College
+    text
     house
     happiness
 
-A noun is a word for a person, place, thing, or idea.
+### Nouns are often, but not always, used with an article 
+	the
+	a
+	an
 
-Nouns are often used with an article (the, a, an), but not always.
 
-Proper nouns always start with a capital letter; common nouns do not.
+#### Proper nouns always start with a CAPITAL letter
+	common nouns may not.
 
-Nouns can be singular or plural, concrete or abstract.
+- Nouns can be singular or plural.
+- Nouns can be concrete or abstract.
+- Nouns often show possession by adding `'s`.
 
-Nouns show possession by adding 's.
+Nouns can function in different `roles` within a `sentence`; for example, a noun can be a `subject`, `direct` `object`, `indirect` object, subject `complement`, or object of a `preposition`.
 
-Nouns can function in different roles within a sentence; for example, a noun can be a subject, direct object, indirect object, subject complement, or object of a preposition.
-
-The young girl brought me a very long letter from the teacher, and then she quickly disappeared.
+The young `girl` brought me a very long `letter` from the `teacher`, and then she quickly disappeared.
 
 Oh my!
 
 See the TIP Sheet on "Nouns" for further information.
 
-2. PRONOUN
+## PRONOUN
 
     A pronoun is a word used in place of a noun.
 
@@ -58,11 +58,11 @@ She... we... they... it
 
 A pronoun is a word used in place of a noun. A pronoun is usually substituted for a specific noun, which is called its antecedent. In the sentence above, the antecedent for the pronoun she is the girl. Pronouns are further defined by type: personal pronouns refer to specific persons or things; possessive pronouns indicate ownership; reflexive pronouns are used to emphasize another noun or pronoun; relative pronouns introduce a subordinate clause; and demonstrative pronouns identify, point to, or refer to nouns.
 
-The young girl brought me a very long letter from the teacher, and then she quickly disappeared. Oh my!
+The young girl brought me a very long letter from the teacher, and then `she` quickly disappeared. Oh my!
 
 See the TIP Sheet on "Pronouns" for further information.
 
-3. VERB
+## VERB
 
     A verb expresses action or being.
 
@@ -74,7 +74,7 @@ The young girl brought me a very long letter from the teacher, and then she quic
 
 See the TIP Sheet on "Verbs" for more information.
 
-4. ADJECTIVE
+## ADJECTIVE
 
     An adjective modifies or describes a noun or pronoun.
 
@@ -86,7 +86,7 @@ The young girl brought me a very long letter from the teacher, and then she quic
 
 See the TIP Sheet on "Adjectives" for more information.
 
-5. ADVERB
+## ADVERB
 
     An adverb modifies or describes a verb, an adjective, or another adverb.
 
@@ -98,7 +98,7 @@ The young girl brought me a very long letter from the teacher, and then she quic
 
 See the TIP Sheet on "Adverbs" for more information.
 
-6. PREPOSITION
+## PREPOSITION
 
     A preposition is a word placed before a noun or pronoun to form a phrase modifying another word in the sentence.
 
@@ -112,7 +112,7 @@ The young girl brought me a very long letter from the teacher, and then she quic
 
 See the TIP Sheet on "Prepositions" for more information.
 
-7. CONJUNCTION
+## CONJUNCTION
 
     A conjunction joins words, phrases, or clauses.
 
@@ -124,7 +124,7 @@ The young girl brought me a very long letter from the teacher, and then she quic
 
 See the TIP Sheet on "Conjunctions" for more information.
 
-8. INTERJECTION
+## INTERJECTION
 
     An interjection is a word used to express emotion.
 
@@ -136,3 +136,7 @@ The young girl brought me a very long letter from the teacher, and then she quic
 
 See the TIP Sheet on "Interjections" for more information.
 
+## Article
+- the
+- a
+- an
