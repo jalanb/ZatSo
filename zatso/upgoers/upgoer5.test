@@ -1,0 +1,11 @@
+Testing the relevant XKCD
+=========================
+
+    >>> from zatso.upgoers import upgoer5
+    >>> assert "Relevant XKCD" in upgoer5.__doc__
+
+Merely importing upgoer5 launched a webbrowser at the relevant XKCD page
+    I wonder how travis will handle that?
+
+That's all it does
+    our work here is done

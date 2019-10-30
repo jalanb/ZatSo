@@ -1,8 +1,16 @@
+"""Open the Relevant XKCD page in a browser"""
+
 import webbrowser
 
-def relevant_xkcd():
-    """Open the relevant XKCD link"""
+
+def lancher():
+    """I get that reference"""
+    import antigravity
+
+
+def launch():
+    """Open the XKCD Up Goer 5 page"""
     webbrowser.open("https://xkcd.com/1133/")
 
 
-relevant_xkcd()
+launch()
