@@ -3,7 +3,7 @@
 import webbrowser
 
 
-def lancher():
+def launcher():
     """I get that reference"""
     import antigravity
 
