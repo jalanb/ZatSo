@@ -1,7 +1,7 @@
 import webbrowser
 
 def relevant_xkcd():
-    """OPen the relevant XKCD link"""
+    """Open the relevant XKCD link"""
     webbrowser.open("https://xkcd.com/1133/")
 
 

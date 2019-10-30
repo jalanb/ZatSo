@@ -2,9 +2,9 @@
 
 [Relevant XKCD](https://xkcd.com/1133/)
 
-This project was inspired by [Up Goer 5](https://xkcd.com/1133/)'s ability to express [rocket science](https://www.explainxkcd.com/wiki/index.php/1133:_Up_Goer_Five#Explanation) in 1000 words, and will try find out how few words can express how much [code](https://github.com/jalanb/zatso).
+This sub-project was inspired by [Up Goer 5](https://xkcd.com/1133/)'s ability to express [rocket science](https://www.explainxkcd.com/wiki/index.php/1133:_Up_Goer_Five#Explanation) in 1000 words, and will try find out how few words can express how much [code](https://github.com/jalanb/ZatSo/blob/master/zatso/upgoers/upgoer5.py).
 
-This projet was also inspired by some of [The Zen Of Python](https://en.wikipedia.org/wiki/Zen_of_Python), by [Tim Peters](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer))
+This sub-project was also inspired by some of [The Zen Of Python](https://en.wikipedia.org/wiki/Zen_of_Python), by [Tim Peters](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer))
 
 1. Beautiful is better than ugly.
 1. Simple is better than complex.
