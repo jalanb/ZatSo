@@ -1,0 +1,21 @@
+source = module ;
+
+module = sections ;
+
+section = '{word}' '.+' '' ;
+
+sections = {section}+ ;
+
+word = {namer}+ ;
+
+namer = letter | digit | under ;
+
+letter = (/[a-z]/ | /[A-Z]/ ) ;
+
+letters = {letter}+ ;
+
+digit = /[0-9]/ ;
+
+digits = {digit}+ ;
+
+under = '_' ;

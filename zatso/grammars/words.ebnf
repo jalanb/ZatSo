@@ -1,0 +1,7 @@
+words = {word}+ ;
+
+word = letters ;
+
+letters = {letter}+ ;
+
+letter = /a-zA-Z/ ;
