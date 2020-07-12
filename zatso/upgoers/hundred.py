@@ -1,6 +1,10 @@
 """Provide the 100 most common words"""
 
-from .ten import *
+import re
+from datetime import datetime
+
+from pysyte.types import paths
+
 
 from datetime import datetime
 
@@ -14,32 +18,24 @@ def add(*args):
     """
     return sun(args)
 
-def age():
-    """age of this
+def age(that=None):
+    """age of this or that
 
     >>> assert age()
+    >>> assert age(add) == age(age)
     """
-    python_file = paths.path(__file__)
-    age_ = datetime.now() - datetime.fromtimestamp(python_file.stat().st_ctime)
+    if that:
+        raise NotImplementedError(f'age({that})')
+    path_to_this = paths.path(__file__)
+    age_ = datetime.now() - datetime.fromtimestamp(path_to_this.stat().st_ctime)
     return age_
 
-
-def to(from_, to_):
-    """add link from from_ to to_
-
-    >>> def one():
-    ...     return 1
-    >>> def two():
-    ...     return 2
-    >>> link = one.to(two)
-    >>> assert one() + one.to() == 3
-    """
-    from_.to = to
 
 def today(sought=None):
     """the word for today
 
-    >>> assert today()[0] in 'mtwfs'
+    >>> assert re.match('[MTWFS][adehinorstu]*day', today())
+    >>> assert re.match('[MTWFS][adehinorstu]*day', 'Thursday')
     """
     d = datetime.today()
     word = d.strftime("%A").lower()

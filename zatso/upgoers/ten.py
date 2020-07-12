@@ -1,31 +1,44 @@
 """Provide the 10 most common words"""
 
-from .one import the
+import random
 
-def of(x, y):
-    return getattr(y, x, None)
+def the(x):
+    return x
 
-and = lambda x, y: x and y
 
-a = the
+def of(x):
+    pass
 
-def to(x):
-    to_ = getattr(x, 'to', lambda y: y)
-    return to_(x)
 
-in = lambda x, y: x in y
+def and(arg=None):
+    pass
 
 def is(x, y):
     return x == y
 
-
-def you():
-    raise NotImplementedError
-
-
-def that(x):
+def a(x):
     return x
 
 
-def it():
-    return True
+def to(x, y):
+    pass
+
+
+def in(x):
+    pass
+
+
+def is(x):
+    pass
+
+
+def you(x):
+    pass
+
+
+def that(x):
+    pass
+
+
+def it(x):
+    pass
