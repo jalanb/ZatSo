@@ -1,6 +1,3 @@
 """ ䷃  ZatSo reads 竜 TatSu objects"""
 
-from . import python
-
-class TatSu(object):
-    pass
+__version__ = '0.0.3'
