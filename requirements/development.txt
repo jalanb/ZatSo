@@ -4,3 +4,4 @@ pprintpp
 pudb
 requests
 sh
+httpie
