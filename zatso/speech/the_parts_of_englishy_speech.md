@@ -1,6 +1,6 @@
 # The Parts Of Englishy Speech
 
-There are nine `parts of speech`in `grammatical` `Englishy` `text`:
+There are nine `parts of speech` in `grammatical` `Englishy` `text`:
 - noun
   - pronoun
   - adjective
@@ -14,7 +14,7 @@ All `recognised` `parts` are `Englishy` `names`.
  
 The words function as meanings of the text. 
 
-An individual word can function as more than one word when used in different circumstances.
+An individual word can function as more than one word when used in different contexts.
 
 Understanding parts of speech is essential for determining the correct definition of a word when using the dictionary.
 
@@ -48,8 +48,6 @@ The young `girl` brought me a very long `letter` from the `teacher`, and then sh
 
 Oh my!
 
-See the TIP Sheet on "Nouns" for further information.
-
 ## PRONOUN
 
     A pronoun is a word used in place of a noun.
@@ -59,8 +57,6 @@ She... we... they... it
 A pronoun is a word used in place of a noun. A pronoun is usually substituted for a specific noun, which is called its antecedent. In the sentence above, the antecedent for the pronoun she is the girl. Pronouns are further defined by type: personal pronouns refer to specific persons or things; possessive pronouns indicate ownership; reflexive pronouns are used to emphasize another noun or pronoun; relative pronouns introduce a subordinate clause; and demonstrative pronouns identify, point to, or refer to nouns.
 
 The young girl brought me a very long letter from the teacher, and then `she` quickly disappeared. Oh my!
-
-See the TIP Sheet on "Pronouns" for further information.
 
 ## VERB
 
@@ -72,8 +68,6 @@ The verb in a sentence expresses action or being. There is a main verb and somet
 
 The young girl brought me a very long letter from the teacher, and then she quickly disappeared. Oh my!
 
-See the TIP Sheet on "Verbs" for more information.
-
 ## ADJECTIVE
 
     An adjective modifies or describes a noun or pronoun.
@@ -84,8 +78,6 @@ An adjective is a word used to modify or describe a noun or a pronoun. It usuall
 
 The young girl brought me a very long letter from the teacher, and then she quickly disappeared. Oh my!
 
-See the TIP Sheet on "Adjectives" for more information.
-
 ## ADVERB
 
     An adverb modifies or describes a verb, an adjective, or another adverb.
@@ -95,8 +87,6 @@ gently... extremely... carefully... well
 An adverb describes or modifies a verb, an adjective, or another adverb, but never a noun. It usually answers the questions of when, where, how, why, under what conditions, or to what degree. Adverbs often end in -ly.
 
 The young girl brought me a very long letter from the teacher, and then she quickly disappeared. Oh my!
-
-See the TIP Sheet on "Adverbs" for more information.
 
 ## PREPOSITION
 
@@ -110,8 +100,6 @@ A preposition is a word placed before a noun or pronoun to form a phrase modifyi
 
 The young girl brought me a very long letter from the teacher, and then she quickly disappeared. Oh my!
 
-See the TIP Sheet on "Prepositions" for more information.
-
 ## CONJUNCTION
 
     A conjunction joins words, phrases, or clauses.
@@ -122,8 +110,6 @@ A conjunction joins words, phrases, or clauses, and indicates the relationship b
 
 The young girl brought me a very long letter from the teacher, and then she quickly disappeared. Oh my!
 
-See the TIP Sheet on "Conjunctions" for more information.
-
 ## INTERJECTION
 
     An interjection is a word used to express emotion.
@@ -133,8 +119,6 @@ Oh!... Wow!... Oops!
 An interjection is a word used to express emotion. It is often followed by an exclamation point.
 
 The young girl brought me a very long letter from the teacher, and then she quickly disappeared. Oh my!
-
-See the TIP Sheet on "Interjections" for more information.
 
 ## Article
 - the
