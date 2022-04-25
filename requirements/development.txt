@@ -3,5 +3,6 @@ ipython
 pprintpp
 pudb
 requests
+rich-cli
 sh
 httpie
