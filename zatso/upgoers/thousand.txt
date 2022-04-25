@@ -519,6 +519,8 @@ many
 mark
 marry
 match
+math
+maths
 matter
 may
 maybe
