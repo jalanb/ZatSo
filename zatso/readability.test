@@ -6,3 +6,16 @@
     >>> assert doc._.flesch_kincaid_grade_level < 10
     >>> assert doc._.flesch_kincaid_reading_ease < 100
     >>> assert doc._.dale_chall < 10
+
+    >>> doc = readability.nlp("Hello World")
+    >>> for level in 1, 10, 100, 1_000, 1_000_000:
+    ...     fail =
+    >>> assert doc._.flesch_kincaid_grade_level < 10
+    >>> assert doc._.flesch_kincaid_grade_level = 10
+    >>> assert doc._.flesch_kincaid_grade_level > 10
+    >>> assert doc._.flesch_kincaid_reading_ease < 100
+    >>> assert doc._.flesch_kincaid_reading_ease = 100
+    >>> assert doc._.flesch_kincaid_reading_ease > 100
+    >>> assert doc._.dale_chall < 10
+    >>> assert doc._.dale_chall = 10
+    >>> assert doc._.dale_chall > 10
