@@ -1,0 +1,8 @@
+
+    >>> from zatso.upgoers import readability
+    >>> assert 'readability scores' in readability.__doc__
+
+    >>> doc = readability.nlp("I am some really difficult text to read because I use obnoxiously large words.")
+    >>> assert doc._.flesch_kincaid_grade_level < 10
+    >>> assert doc._.flesch_kincaid_reading_ease < 100
+    >>> assert doc._.dale_chall < 10
