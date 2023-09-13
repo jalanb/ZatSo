@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-"""Describe code"""
+"""Breaking code"""
 
 from pysyte.cli.main import run
 
