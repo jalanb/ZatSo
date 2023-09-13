@@ -1,0 +1,13 @@
+The zatso.python module
+=========================
+
+    >>> from zatso import python
+    >>> assert 'python for Zatso' in python.__doc__
+
+    >>> from zatso import TatSu
+    >>> from pysyte.types.paths import path
+
+    >>> path_to_python = path(python)
+    >>> zatso_python = python.read(path_to_python)
+    >>> assert isinstance(zatso_python, TatSu)
+

@@ -1,0 +1,6 @@
+The zatso package
+=========================
+
+    >>> import zatso
+    >>> assert '䷃  ZatSo reads 竜 TatSu ' in zatso.__doc__
+
