@@ -1,8 +1,13 @@
-bumpversion
+-r devops.txt
+
+httpie
 ipython
 pprintpp
 pudb
+pytest-icdiff
+pytest-instafail
+pytest-pudb
+pytest-random-order
+pytest-sugar
 requests
-rich-cli
 sh
-httpie

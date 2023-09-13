@@ -1,8 +1,7 @@
-coverage
+-r requirements.txt
+
+coverage>=4.3.4
 mock
-nose
-nose-progressive
-pinocchio
 pytest
 pytest-cov
 requests_mock
