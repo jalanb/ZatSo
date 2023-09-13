@@ -1,4 +1,6 @@
-"""zatso can be run in `bash` like
+"""
+
+zatso can be run in `bash` like
 
     $ python -m zatso
 
