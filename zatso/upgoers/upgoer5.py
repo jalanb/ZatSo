@@ -1,16 +1,21 @@
-"""Open the Relevant XKCD page in a browser"""
+"""up goer 5 for code
 
-import webbrowser
+Relevant Explainer
+ https://www.explainxkcd.com/wiki/index.php/1133:_Up_Goer_Five#Explanation
+
+"""
+# pylint: disable-msg=
 
 
-def lancher():
+def launcher():
     """I get that reference"""
     import antigravity
 
 
-def launch():
-    """Open the XKCD Up Goer 5 page"""
-    webbrowser.open("https://xkcd.com/1133/")
+def relevant_xkcd():
+    """Open relevant XKCD"""
+    import webbrowser
+    webbrowser.open('https://xkcd.com/1133/')
 
 
-launch()
+relevant_xkcd()

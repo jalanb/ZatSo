@@ -12,6 +12,7 @@ def add_args(p):
 
 
 def main():
+    breakpoint()
     return kat_main()
 
 

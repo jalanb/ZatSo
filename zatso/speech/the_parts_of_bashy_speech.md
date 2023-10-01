@@ -7,7 +7,7 @@ There are three `commands` in the `Bashy` `language`:
 -   executables
     
 There are many `parts of speech` in `Bashy`: 
-- 	functions 
+- 	commands 
 -   expressions
 -   sequences
 -   loops

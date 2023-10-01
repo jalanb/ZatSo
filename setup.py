@@ -6,11 +6,6 @@ from setuptools import setup
 
 import zatso
 
-with open('README.md') as stream:
-    stripped_lines = [l.strip() for l in stream.read().splitlines() if l[0] != '#']
-    lines = [l for l in stripped_lines if l[0] != '#']
-    description = '\n'.join(lines)
-
 def package_files(directory):
     paths = []
     test_extensions = ('.test', '.tests')
@@ -25,6 +20,9 @@ def package_files(directory):
 extra_files = package_files('zatso')
 
 
+description = zatso.__doc__
+headline = description.splitlines()[0]
+
 setup(
     name=zatso.__name__,
     packages=find_packages(),
@@ -36,8 +34,8 @@ setup(
     license='MIT License',
     author='J Alan Brogan',
     author_email='github@al-got-rhythm.net',
-    description=description.splitlines()[0],
-    long_description=description,
+    description=description,
+    long_description=headline,
     platforms='any',
     classifiers=[
         'Intended Audience :: Developers',
