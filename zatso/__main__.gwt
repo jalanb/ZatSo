@@ -1,0 +1,19 @@
+Given
+
+Bash, Python
+
+When
+
+zatso should be run in `bash` as
+
+    $ python -m zatso
+
+Then
+
+zatso should provide `main()`
+
+    >>> from pysyte.types import methods
+    >>> from zatso import __main__
+    >>> main = methods.find('main')
+    >>> assert main
+
