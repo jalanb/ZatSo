@@ -24,7 +24,7 @@ class Row(object):
             v='verb',
             x='not',
         )
-        assert part_of_speech not in 'et'
+        assert parts[part_of_speech] != 'unknown', f"Sorry, don't know {part_of_speech!r}"
         self.part_of_speech = parts[part_of_speech]
         self.frequency = int(frequency)
         self.dispersion = float(dispersion)
