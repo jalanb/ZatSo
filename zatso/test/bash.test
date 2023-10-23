@@ -1,0 +1,14 @@
+The zatso.bash module
+=========================
+
+    >>> from zatso import bash
+    >>> assert 'bash for Zatso' in bash.__doc__
+
+    >>> from zatso import TatSu
+    >>> from pysyte.types.paths import path
+
+    >>> path_to_bash_module = path(bash)
+    >>> path_to_bash_sh = path_to_bash_module.extend_by('.sh')
+    >>> zatso_bash = zatso.bash.read(path_to_bash_sh)
+    >>> assert isinstance(zatso_bash, zatso.TatSu)
+

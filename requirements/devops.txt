@@ -1,0 +1,7 @@
+-r linting.txt
+-r testing.txt
+
+bumpversion
+isort
+twine
+wheel
