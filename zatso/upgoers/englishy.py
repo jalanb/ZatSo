@@ -8,29 +8,31 @@ from pysyte.types.paths import path
 class Row(object):
     def __init__(self, rank,part_of_speech,frequency,dispersion):
         self.rank = int(rank)
-        parts = dict(
-            a='article',
-            c='conjunction',
-            d='determiner',
-            e='unknown',
-            i='preposition',
-            j='adjective',
-            m='number',
-            n='noun',
-            p='pronoun',
-            r='adverb',
-            t='unknown',
-            u='exclamation',
-            v='verb',
-            x='not',
-        )
-        assert part_of_speech not in 'et'
-        self.part_of_speech = parts[part_of_speech]
+        parts = {
+            'a': 'article',
+            'c': 'conjunction',
+            'd': 'determiner',
+            'e': 'unknown',
+            'i': 'preposition',
+            'j': 'adjective',
+            'm': 'number',
+            'n': 'noun',
+            'p': 'pronoun',
+            'r': 'adverb',
+            't': 'unknown',
+            'u': 'exclamation',
+            'v': 'verb',
+            'x': 'not',
+        }
+        part = part_of_speech
+        assert parts[part] != 'unknown', f"Sorry, don't know {part_of_speech!r}"
+        self.part_of_speech = parts[part]
         self.frequency = int(frequency)
         self.dispersion = float(dispersion)
 
-def _read():
-    _path_to_csv = path(__file__).extend_by('csv')
+def _read_my_csv():
+    my_python = __file__
+    _path_to_csv = path(my_python).extend_by('csv')
     result = OrderedDict()
     with open(_path_to_csv) as stream:
         reader = csv.reader(stream)
@@ -44,7 +46,7 @@ def _read():
             result[name] = Row(*items)
         return result
 
-words = _read()
+words = _read_my_csv()
 
 def has(word):
     return word in words
