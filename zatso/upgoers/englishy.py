@@ -1,32 +1,38 @@
 import csv
 from collections import OrderedDict
+from dataclasses import dataclass
 
 
 from pysyte.types.paths import path
 
+def part_name(part_of_speech : str) -> str:
+    parts_of_speech = {
+        'a': 'article',
+        'c': 'conjunction',
+        'd': 'determiner',
+        'e': 'unknown',
+        'i': 'preposition',
+        'j': 'adjective',
+        'm': 'number',
+        'n': 'noun',
+        'p': 'pronoun',
+        'r': 'adverb',
+        't': 'unknown',
+        'u': 'exclamation',
+        'v': 'verb',
+        'x': 'not',
+    }
+    result = parts_of_speech.get(part_of_speech, "unknown")
+    assert result != "unknown"
+    return result
 
+
+@dataclass
 class Row(object):
     def __init__(self, rank,part_of_speech,frequency,dispersion):
         self.rank = int(rank)
-        parts = {
-            'a': 'article',
-            'c': 'conjunction',
-            'd': 'determiner',
-            'e': 'unknown',
-            'i': 'preposition',
-            'j': 'adjective',
-            'm': 'number',
-            'n': 'noun',
-            'p': 'pronoun',
-            'r': 'adverb',
-            't': 'unknown',
-            'u': 'exclamation',
-            'v': 'verb',
-            'x': 'not',
-        }
-        part = part_of_speech
-        assert parts[part] != 'unknown', f"Sorry, don't know {part_of_speech!r}"
-        self.part_of_speech = parts[part]
+        self.name = name
+        self.part_of_speech = part_name(part_of_speech)
         self.frequency = int(frequency)
         self.dispersion = float(dispersion)
 
