@@ -7,8 +7,8 @@ The zatso.bash module
     >>> from zatso import TatSu
     >>> from pysyte.types.paths import path
 
-    >>> path_to_bash_module = path(bash)
-    >>> path_to_bash_sh = path_to_bash_module.extend_by('.sh')
+    >>> path_to_bash_python = path(bash)
+    >>> path_to_bash_sh = path_to_bash_python.extend_by('.sh')
     >>> zatso_bash = zatso.bash.read(path_to_bash_sh)
     >>> assert isinstance(zatso_bash, zatso.TatSu)
 

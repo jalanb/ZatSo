@@ -12,8 +12,8 @@ The 10 most common words in Englishy are
 
 These words are made available as functions in the module
 
-    >>> assert ten.is(ten.to(1), 1)
+    >>> assert ten.is(1, ten.a(1))
 
 And words in tests
 
-    >>> to 1 is 1
+    >>> 1 is a 1
