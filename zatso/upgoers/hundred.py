@@ -14,9 +14,10 @@ def add(*args):
     """add all the args
 
     >>> assert add((1, 2, 4)) == 7
-    # assert "add 1 to 2 to 4" gives 7
+    
+    Want to assert that "add 1 to 2 to 4" gives 7
     """
-    return sun(args)
+    return sum(*args)
 
 def age(that=None):
     """age of this or that
@@ -40,7 +41,7 @@ def today(sought=None):
     d = datetime.today()
     word = d.strftime("%A").lower()
     seek = sought.lower() if sought else ''
-    if seek and seek[0] in 'mtwfs'
+    if seek and seek[0] in 'mtwfs':
         return seek == word
     return word
 

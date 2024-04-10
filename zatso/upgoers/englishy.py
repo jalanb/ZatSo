@@ -29,7 +29,13 @@ def part_name(part_of_speech : str) -> str:
 
 @dataclass
 class Row(object):
-    def __init__(self, rank,part_of_speech,frequency,dispersion):
+    rank: int = 9999
+    name: str = ""
+    part_of_speech: str = ""
+    frequency: float = 0.0
+    dispersion: int = 0
+
+    def __init__(self, rank, name, part_of_speech,frequency,dispersion):
         self.rank = int(rank)
         self.name = name
         self.part_of_speech = part_name(part_of_speech)
@@ -42,14 +48,12 @@ def _read_my_csv():
     result = OrderedDict()
     with open(_path_to_csv) as stream:
         reader = csv.reader(stream)
-        csv_rows = list(reader)
-        data = csv_rows[2:]
-        rows = []
-        for datum in data:
-            items = list(datum)
-            name = items[1]
-            del items[1]
-            result[name] = Row(*items)
+        for row in list(reader)[2:]:
+            try:
+                r = Row(*row)
+                result[r.name] = r
+            except AssertionError:
+                print(f"{r!r}")
         return result
 
 words = _read_my_csv()
