@@ -1,0 +1,47 @@
+A lower matches '[a-z]'
+An upper matches '[A-Z]'
+A comma matches '[,]'
+
+A letter is an upper or lower
+
+A lower word is lowers
+An upper word is uppers
+A title word is an upper, lowers
+
+A word is lower word or upper word or title word
+
+An article is a word
+All articles are a, an, the
+
+A verb is a word
+All verbs are is, are
+
+A noun has a definition or is a word
+
+A phrase is some words or has a definition
+
+All qualifiers are all, some
+A qualified noun is qualifier, noun phrase
+
+A adjectived noun is adjective, noun phrase
+
+An articled noun is article, noun phrase
+
+All noun phrases are articled noun, adjectived noun, qualified noun, plural, noun
+
+All definitions are
+articled noun , "is", noun phrase
+qualifier, plural, "are", list of noun phrases
+
+A comma list is list, comma, item or item
+A line list is list, end of line, item or item
+
+A list of items is a comma list or line list
+
+A statement is a definition
+
+A verb phrase is verb, noun phrase or a verb
+
+A plural is a noun, "s"
+
+Some logical operators are either, or, of
