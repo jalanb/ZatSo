@@ -1,9 +1,12 @@
-The zatso.bash module
+The zatso.parsers package
 =========================
 
-    >>> from zatso.parsers import bash
+    >>> from zatso import parsers
 
-    >>> path_to_bash_source = 'tests/data/zatso.bash'
-    >>> zatso_bash = bash.parse(path_to_bash_source)
+    >>> from pysyte.types import paths
+
+    >>> path_to_package = paths.path(parsers).parent
+    >>> path_to_bash_source = path_to_package / 'test/bash.sh'
+    >>> zatso_bash = parsers.bash.parse(path_to_bash_source)
     >>> assert zatso_bash
 
