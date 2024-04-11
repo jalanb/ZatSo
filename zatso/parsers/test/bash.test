@@ -1,0 +1,9 @@
+The zatso.bash module
+=========================
+
+    >>> from zatso.parsers import bash
+
+    >>> path_to_bash_source = 'tests/data/zatso.bash'
+    >>> zatso_bash = bash.parse(path_to_bash_source)
+    >>> assert zatso_bash
+
