@@ -6,5 +6,6 @@ flake8-comprehensions
 flake8-eradicate
 flake8-isort
 mypy
+pyupgrade
 types-requests
 types-mock
