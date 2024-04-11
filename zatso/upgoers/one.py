@@ -28,14 +28,16 @@ a = the
 def the(*args, **kwargs):
     """the thing in the args
 
-    >>> assert the('the') == 'the'
+    >>> from zatso.upgoers import one
+    >>> expected = one.the
+    >>> actual = the('the')
+    >>> assert actual == expected, f"{actual=} != {expected=}"
     """
-    the_=globals()['the']
-    if the_ in args:
-        the_= the_
-    if the_ in kwargs:
-        the_ = kwargs[the_]
-    else:
-        thes = [_ for _ in args if getattr(_, 'name', '') == 'the']
-        the_ = thes[0] if thes else the_
-    return the_.name
+    result=globals()['the']
+    if result in args:
+        return result
+    if result in kwargs:
+        return kwargs[result]
+    args_named_the = [_ for _ in items if getattr(_, 'name', 'the') == name]
+    result = args_named_the[0] if args_named_the else result
+    return result
