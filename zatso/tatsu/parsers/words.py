@@ -69,6 +69,7 @@ class Parser(Parser):
 
         def block0():
             self._word_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -80,6 +81,7 @@ class Parser(Parser):
 
         def block0():
             self._letter_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -107,4 +109,3 @@ if __name__ == '__main__':
     ast = generic_main(main, Parser, name='')
     data = asjson(ast)
     print(json.dumps(data, indent=2))
-
