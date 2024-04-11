@@ -8,9 +8,14 @@ zatso.parses.bash
 Parse ~/.bashrc
 ---------------
 
-    >>> assert paths.bashrc.isfile()
+    >>> bashrc = paths.home() / '.bashrc'
+    >>> assert bashrc.isfile()
 
-    >>> ast = bash.parse(paths.bashrc)
+    >>> name = str(paths.bashrc)
+    >>> text = bashrc.text()
+
+    >>> parser = bash.Parser()
+    >>> ast = parser.parse(name, text)
 
 This is a guess, and likely only works for me
 
