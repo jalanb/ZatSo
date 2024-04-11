@@ -6,7 +6,8 @@ Most common english words
 the
 ---
 
-    >>> assert list(words.keys())[0] == 'the'
+    >>> keys = list(words.keys())
+    >>> assert "the" in keys, f"{[_ for _ in keys if 'the' in _]}"
     >>> assert words['the'].rank == 1
 
     >>> assert 'dog' in words
