@@ -1,0 +1,17 @@
+zatso.parses.bash
+=================
+
+    >>> from zatso.tatsu.parsers import bash
+
+    >>> from pysyte.types import paths
+
+Parse ~/.bashrc
+---------------
+
+    >>> assert paths.bashrc.isfile()
+
+    >>> ast = bash.parse(paths.bashrc)
+
+This is a guess, and likely only works for me
+
+    >>> assert "bashrc" in ast.functions

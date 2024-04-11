@@ -259,7 +259,6 @@ class TestParser(Parser):
     def _slash_(self):
         self._token('/')
 
-
 def main(filename, **kwargs):
     if not filename or filename == '-':
         text = sys.stdin.read()
