@@ -2,20 +2,19 @@ source = module ;
 
 module = sections ;
 
-section = '{word}' '.+' '' ;
-
 sections = {section}+ ;
+
+section = {words}+ ;
+
+words = {word}+ ;
 
 word = {namer}+ ;
 
 namer = letter | digit | under ;
 
-letter = (/[a-z]/ | /[A-Z]/ ) ;
-
-letters = {letter}+ ;
+letter = /[a-zA-Z]/ ;
 
 digit = /[0-9]/ ;
 
-digits = {digit}+ ;
-
 under = '_' ;
+
