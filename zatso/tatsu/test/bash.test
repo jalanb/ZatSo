@@ -11,7 +11,7 @@ Parse ~/.bashrc
     >>> bashrc = paths.home() / '.bashrc'
     >>> assert bashrc.isfile()
 
-    >>> name = str(paths.bashrc)
+    >>> name = bashrc.name
     >>> text = bashrc.text()
 
     >>> parser = bash.Parser()
