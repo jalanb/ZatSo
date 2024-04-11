@@ -1,4 +1,0 @@
-
-class AST:
-    pass:wq
-
