@@ -64,6 +64,7 @@ class TestParser(Parser):
 
         def block0():
             self._word_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -75,6 +76,7 @@ class TestParser(Parser):
 
         def block0():
             self._letter_()
+
         self._positive_closure(block0)
 
     @tatsumasu()

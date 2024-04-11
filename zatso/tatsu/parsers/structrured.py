@@ -77,6 +77,7 @@ class Parser(Parser):
 
         def block0():
             self._section_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -84,6 +85,7 @@ class Parser(Parser):
 
         def block0():
             self._words_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -91,6 +93,7 @@ class Parser(Parser):
 
         def block0():
             self._word_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -98,6 +101,7 @@ class Parser(Parser):
 
         def block0():
             self._namer_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -110,9 +114,7 @@ class Parser(Parser):
             with self._option():
                 self._under_()
             self._error(
-                'expecting one of: '
-                "'_' <digit> <letter> <under> [0-9]"
-                '[a-zA-Z]'
+                'expecting one of: ' "'_' <digit> <letter> <under> [0-9]" '[a-zA-Z]'
             )
 
     @tatsumasu()
@@ -148,4 +150,3 @@ if __name__ == '__main__':
     ast = generic_main(main, Parser, name='')
     data = asjson(ast)
     print(json.dumps(data, indent=2))
-
