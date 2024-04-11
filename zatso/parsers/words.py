@@ -38,7 +38,7 @@ class Buffer(Buffer):
             comments_re=None,
             eol_comments_re=None,
             keywords=KEYWORDS,
-            start='source',
+            start='words',
         )
         config = config.replace(**settings)
 
@@ -58,97 +58,22 @@ class Parser(Parser):
             comments_re=None,
             eol_comments_re=None,
             keywords=KEYWORDS,
-            start='source',
+            start='words',
         )
         config = config.replace(**settings)
 
         super().__init__(config=config)
 
     @tatsumasu()
-    def _source_(self):
-        self._module_()
-
-    @tatsumasu()
-    def _module_(self):
-        with self._choice():
-            with self._option():
-                self._functions_()
-
-                def block0():
-                    self._statement_()
-                self._closure(block0)
-            with self._option():
-                self._statement_()
-            self._error(
-                'expecting one of: '
-                "'{word}' <function> <functions>"
-                '<statement> <word>'
-            )
-
-    @tatsumasu()
-    def _statement_(self):
+    def _words_(self):
 
         def block0():
             self._word_()
         self._positive_closure(block0)
 
     @tatsumasu()
-    def _statements_(self):
-
-        def block0():
-            self._statement_()
-        self._closure(block0)
-
-    @tatsumasu()
-    def _function_(self):
-        self._token('{word}')
-        self._token('(')
-        self._token(')')
-        self._token('{')
-        self._token('{word}+')
-        self._token('}')
-
-    @tatsumasu()
-    def _functions_(self):
-
-        def block0():
-            self._function_()
-        self._positive_closure(block0)
-
-    @tatsumasu()
     def _word_(self):
-
-        def block0():
-            self._namer_()
-        self._positive_closure(block0)
-
-    @tatsumasu()
-    def _namer_(self):
-        with self._choice():
-            with self._option():
-                self._letter_()
-            with self._option():
-                self._digit_()
-            with self._option():
-                self._under_()
-            self._error(
-                'expecting one of: '
-                "'_' <digit> <letter> <under> [0-9] [A-Z]"
-                '[a-z]'
-            )
-
-    @tatsumasu()
-    def _letter_(self):
-        with self._group():
-            with self._choice():
-                with self._option():
-                    self._pattern('[a-z]')
-                with self._option():
-                    self._pattern('[A-Z]')
-                self._error(
-                    'expecting one of: '
-                    '[A-Z] [a-z]'
-                )
+        self._letters_()
 
     @tatsumasu()
     def _letters_(self):
@@ -158,19 +83,8 @@ class Parser(Parser):
         self._positive_closure(block0)
 
     @tatsumasu()
-    def _digit_(self):
-        self._pattern('[0-9]')
-
-    @tatsumasu()
-    def _digits_(self):
-
-        def block0():
-            self._digit_()
-        self._positive_closure(block0)
-
-    @tatsumasu()
-    def _under_(self):
-        self._token('_')
+    def _letter_(self):
+        self._pattern('a-zA-Z')
 
 
 def main(filename, **kwargs):
