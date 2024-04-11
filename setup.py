@@ -11,7 +11,6 @@ setup(
         'pysyte',
         'requests',
         'sh',
-        'spacy',
         'tatsu',
     ],
     tests_require=['py.test'],

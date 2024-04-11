@@ -3,7 +3,4 @@
 grako
 pym
 pysyte
-spacy
-spacy-readability
-spacy-wordnet
 tatsu
