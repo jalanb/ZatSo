@@ -5,30 +5,26 @@ import random
 def the(x):
     return x
 
+def and_(x, y):
+    return x and y
+
 
 def of(x):
     pass
 
 
-def and(arg=None):
-    pass
+def in_(x, y):
+    return x in y
 
-def is(x, y):
-    return x == y
+
+def is_(x, y):
+    return x is y
 
 def a(x):
     return x
 
 
 def to(x, y):
-    pass
-
-
-def in(x):
-    pass
-
-
-def is(x):
     pass
 
 
@@ -42,3 +38,8 @@ def that(x):
 
 def it(x):
     pass
+
+aliases = globals()
+aliases["and"] = and_
+aliases["in"] = in_
+aliases["is"] = is_
