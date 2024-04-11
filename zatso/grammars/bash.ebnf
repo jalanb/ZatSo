@@ -1,10 +1,10 @@
 source = module ;
 
-module = sections ;
-
-sections = {section}* ;
-
-section = statements functions;
+module
+    =
+    | functions {statement}*
+    | statement
+    ;
 
 statement = {word}+ ;
 
