@@ -15,7 +15,7 @@ Parse ~/.bashrc
     >>> text = bashrc.text()
 
     >>> parser = bash.Parser()
-    >>> ast = parser.parse(name, text)
+    >>> ast = parser.parse(text, filename=name)
 
 This is a guess, and likely only works for me
 
