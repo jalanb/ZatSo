@@ -7,6 +7,6 @@ The zatso.parsers package
 
     >>> path_to_package = paths.path(parsers).parent
     >>> path_to_bash_source = path_to_package / 'test/bash.sh'
-    >>> zatso_bash = parsers.bash.parse(path_to_bash_source)
+    >>> zatso_bash = parsers.bash(path_to_bash_source)
     >>> assert zatso_bash
 
