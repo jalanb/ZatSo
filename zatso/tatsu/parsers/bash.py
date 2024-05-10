@@ -69,6 +69,11 @@ class Parser(Parser):
         self._module_()
 
     @tatsumasu()
+    def _shebang_(self):
+        self._token('#!')
+        self._command_()
+
+    @tatsumasu()
     def _module_(self):
         with self._choice():
             with self._option():
@@ -76,31 +81,76 @@ class Parser(Parser):
 
                 def block0():
                     self._statement_()
-
                 self._closure(block0)
             with self._option():
                 self._statement_()
             self._error(
                 'expecting one of: '
                 "'{word}' <function> <functions>"
-                '<statement> <word>'
+                '<statement> <words>'
             )
 
     @tatsumasu()
     def _statement_(self):
+        self._words_()
+
+    @tatsumasu()
+    def _command_(self):
+        self._type_()
+        self._words_()
+
+    @tatsumasu()
+    def _type_(self):
+        with self._choice():
+            with self._option():
+                self._word_()
+            with self._option():
+                self._path_()
+            self._error(
+                'expecting one of: '
+                '<path> <pather> <word> [a-zA-Z0-9_]+'
+            )
+
+    @tatsumasu()
+    def _options_(self):
 
         def block0():
-            self._word_()
-
+            self._option_()
         self._positive_closure(block0)
+
+    @tatsumasu()
+    def _option_(self):
+        with self._choice():
+            with self._option():
+                self._word_()
+            with self._option():
+                self._path_()
+            with self._option():
+                self._long_option_()
+            with self._option():
+                self._short_option_()
+            self._error(
+                'expecting one of: '
+                "'-' '--' <long_option> <path> <pather>"
+                '<short_option> <word> [a-zA-Z0-9_]+'
+            )
+
+    @tatsumasu()
+    def _long_option_(self):
+        self._token('--')
+        self._word_()
+
+    @tatsumasu()
+    def _short_option_(self):
+        self._token('-')
+        self._letter_()
 
     @tatsumasu()
     def _statements_(self):
 
         def block0():
             self._statement_()
-
-        self._closure(block0)
+        self._positive_closure(block0)
 
     @tatsumasu()
     def _function_(self):
@@ -116,16 +166,49 @@ class Parser(Parser):
 
         def block0():
             self._function_()
+        self._positive_closure(block0)
 
+    @tatsumasu()
+    def _words_(self):
+
+        def block0():
+            self._word_()
         self._positive_closure(block0)
 
     @tatsumasu()
     def _word_(self):
+        self._pattern('[a-zA-Z0-9_]+')
+
+    @tatsumasu()
+    def _paths_(self):
 
         def block0():
-            self._namer_()
-
+            self._path_()
         self._positive_closure(block0)
+
+    @tatsumasu()
+    def _path_(self):
+
+        def block0():
+            self._pather_()
+        self._positive_closure(block0)
+
+    @tatsumasu()
+    def _pather_(self):
+        with self._choice():
+            with self._option():
+                self._letter_()
+            with self._option():
+                self._digit_()
+            with self._option():
+                self._under_()
+            with self._option():
+                self._slash_()
+            self._error(
+                'expecting one of: '
+                "'/' '_' <digit> <letter> <slash> <under>"
+                '[0-9] [A-Z] [a-z]'
+            )
 
     @tatsumasu()
     def _namer_(self):
@@ -137,7 +220,9 @@ class Parser(Parser):
             with self._option():
                 self._under_()
             self._error(
-                'expecting one of: ' "'_' <digit> <letter> <under> [0-9] [A-Z]" '[a-z]'
+                'expecting one of: '
+                "'_' <digit> <letter> <under> [0-9] [A-Z]"
+                '[a-z]'
             )
 
     @tatsumasu()
@@ -148,14 +233,16 @@ class Parser(Parser):
                     self._pattern('[a-z]')
                 with self._option():
                     self._pattern('[A-Z]')
-                self._error('expecting one of: ' '[A-Z] [a-z]')
+                self._error(
+                    'expecting one of: '
+                    '[A-Z] [a-z]'
+                )
 
     @tatsumasu()
     def _letters_(self):
 
         def block0():
             self._letter_()
-
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -167,12 +254,15 @@ class Parser(Parser):
 
         def block0():
             self._digit_()
-
         self._positive_closure(block0)
 
     @tatsumasu()
     def _under_(self):
         self._token('_')
+
+    @tatsumasu()
+    def _slash_(self):
+        self._token('/')
 
 
 def main(filename, **kwargs):
@@ -195,3 +285,4 @@ if __name__ == '__main__':
     ast = generic_main(main, Parser, name='')
     data = asjson(ast)
     print(json.dumps(data, indent=2))
+

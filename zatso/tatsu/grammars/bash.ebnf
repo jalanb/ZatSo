@@ -1,9 +1,8 @@
-source = {shebang} {module} ;
+source = module ;
 
-shebang = '#!' {command};
+shebang = '#!' command;
 
 #! /usr/local/bin/bash -x
-
 
 module
     =
@@ -11,30 +10,29 @@ module
     | statement
     ;
 
-statement = 
-    | {words}
-    | {command} {options}
-    ;
+statement = words ;
 
-command = 
-   | {word}
-   | {path}
+command = type words;
+
+type =
+   | word
+   | path
    ;
 
 options = {option}+ ;
 
 option =
-   | {word}
-   | {path}
-   | {long_option}
-   | {short_option}
+   | word
+   | path
+   | long_option
+   | short_option
    ;
 
-long_option = '--' {word} ;
+long_option = '--' word ;
 
-short_option = '-' {letter} ;
+short_option = '-' letter ;
 
-statements = {statement}* ;
+statements = {statement}+ ;
 
 function = '{word}' '(' ')' '{' '{word}+' '}' ;
 
@@ -42,13 +40,15 @@ functions = {function}+ ;
 
 words = {word}+ ;
 
-word = {namer}+ ;
+word = /[a-zA-Z0-9_]+/ ;
+
+# word = {namer}+ ;
 
 paths = {path}+ ;
 
 path = {pather}+ ;
 
-pather = {namer} | {slash} ;
+pather = letter | digit | under | slash ;
 
 namer = letter | digit | under ;
 
