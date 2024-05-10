@@ -76,7 +76,6 @@ class TestParser(Parser):
 
                 def block0():
                     self._statement_()
-
                 self._closure(block0)
             with self._option():
                 self._statement_()
@@ -162,7 +161,13 @@ class TestParser(Parser):
 
         def block0():
             self._function_()
+        self._positive_closure(block0)
 
+    @tatsumasu()
+    def _words_(self):
+
+        def block0():
+            self._word_()
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -217,7 +222,9 @@ class TestParser(Parser):
             with self._option():
                 self._under_()
             self._error(
-                'expecting one of: ' "'_' <digit> <letter> <under> [0-9] [A-Z]" '[a-z]'
+                'expecting one of: '
+                "'_' <digit> <letter> <under> [0-9] [A-Z]"
+                '[a-z]'
             )
 
     @tatsumasu()
@@ -228,14 +235,16 @@ class TestParser(Parser):
                     self._pattern('[a-z]')
                 with self._option():
                     self._pattern('[A-Z]')
-                self._error('expecting one of: ' '[A-Z] [a-z]')
+                self._error(
+                    'expecting one of: '
+                    '[A-Z] [a-z]'
+                )
 
     @tatsumasu()
     def _letters_(self):
 
         def block0():
             self._letter_()
-
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -247,7 +256,6 @@ class TestParser(Parser):
 
         def block0():
             self._digit_()
-
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -257,6 +265,7 @@ class TestParser(Parser):
     @tatsumasu()
     def _slash_(self):
         self._token('/')
+
 
 def main(filename, **kwargs):
     if not filename or filename == '-':
@@ -279,3 +288,4 @@ if __name__ == '__main__':
     ast = generic_main(main, TestParser, name='Test')
     data = asjson(ast)
     print(json.dumps(data, indent=2))
+
