@@ -2,7 +2,6 @@
 
 httpie
 ipython
-pprintpp
 pudb
 pytest-icdiff
 pytest-instafail

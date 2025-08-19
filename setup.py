@@ -66,13 +66,8 @@ setup(
         'spacy',
         'tatsu',
     ],
-#     entry_points = {
-#         'console_scripts': [
-#             'zat = zatso.cli.bin:zat'
-#         ]
-#     },
     scripts=[
-        'bin/zat',
+        'bin/zatso',
     ],
     tests_require=['py.test'],
     extras_require={
