@@ -1,3 +1,217 @@
 [build-system]
 requires = [ "setuptools >= 65.5.1", "wheel >= 0.29.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "zatso"
+version = "0.1.14"
+description = "Zatso Curates Languages"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT License"}
+authors = [
+    {name = "jalanb", email = "github@al-got-rhythm.net"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "Development Status :: 1 - Just an idea",
+    "Natural Language :: English",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "pysyte>=0.8.74",
+    "pym",
+    "rich",
+    "stackprinter",
+    "textual",
+]
+
+[project.optional-dependencies]
+lint = [
+    "black",
+    "blackdoc",
+    "flake8",
+    "flake8-bugbear",
+    "flake8-comprehensions",
+    "flake8-eradicate",
+    "flake8-isort",
+    "Flake8-pyproject",
+    "isort",
+    "mypy",
+    "types-PyYAML",
+    "types-setuptools",
+    "types-deprecated",
+]
+
+test = [
+#   "zatso",
+    "callee",
+    "codecov",
+    "coverage",
+    "pytest",
+    "pytest-cov",
+    "pytest-random-order",
+    "pytest-xdist",
+    "tox",
+]
+
+devops = [
+    "zatso[test]",
+    "zatso[lint]",
+    "bumpver",
+    "pipx",
+    "pyinfra",
+    "build",
+    "twine",
+]
+
+dev = [
+    "zatso[devops]",
+    "httpie",
+    "ipython",
+    "pudb",
+    "pytest-pudb",
+    "pytest-sugar",
+    "sh",
+]
+
+[project.urls]
+Homepage = "https://github.com/jalanb/zatso"
+
+[tool.setuptools.package-data]
+# These patterns include doctests, which serve as both documentation and test cases,
+# potentially useful for end users of zatso.
+zatso = ["**/*.test", "**/*.tests", "**/*.yaml"]
+
+[tool.setuptools.packages.find]
+include = ["zatso*"]
+exclude = ["test_*.py"]
+
+[tool.tox]
+envlist = [
+    "formats",
+    "lints",
+    "tests",
+    "devs",
+    "patch",
+    "minor",
+    "major",
+]
+
+[tool.tox.env.formats]
+deps = [".[lint]"]
+commands = [
+    ["black", "-S", "."],
+    ["blackdoc", "-S", "--include", "[.](md|py|test)", "--exclude", ".*\\.swp$", "."],
+    ["isort", "zatso"],
+]
+
+[tool.tox.env.lints]
+deps = [".[lint]"]
+commands = [
+    ["black", "-S", "--check", "."],
+    ["blackdoc", "-S", "--include", "[.](md|py|test)", "--check", "."],
+    ["isort", "--check-only", "zatso"],
+    ["flake8", "zatso"],
+    ["mypy", "--ignore-missing-imports", "--install-types", "--non-interactive", "zatso"],
+]
+
+[tool.tox.env.tests]
+deps = [".[test]"]
+pass_env = ["PYTHONPATH"]
+commands = [
+    ["py.test", "--cov=zatso", "zatso" ]
+]
+
+[tool.tox.env.devs]
+deps = [".[test]"]
+commands = [
+    ["py.test", "--exitfirst", "-m'not slow'", "--random-order","zatso"]
+]
+
+[tool.tox.env.pudb]
+deps = [".[dev]"]
+commands = [
+    ["py.test", "--pudb", "zatso"]
+]
+
+[tool.tox.env.patch]
+description = "Bump patch version"
+allowlist_externals = ["bumpver"]
+commands = [
+    ["bumpver", "update", "-n", "--patch"]
+]
+
+[tool.tox.env.minor]
+description = "Bump minor version"
+allowlist_externals = ["bumpver"]
+commands = [
+    ["bumpver", "update", "-n", "--minor"]
+]
+
+[tool.tox.env.major]
+description = "Bump major version"
+allowlist_externals = ["bumpver"]
+commands = [
+    ["bumpver", "update", "-n", "--major"]
+]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+line_length = 88
+force_grid_wrap = 0
+use_parentheses = true
+combine_as_imports = true
+
+[tool.flake8]
+# https://black.readthedocs.io/en/stable/guides/using_black_with_other_tools.html#flake8
+max-line-length = 88
+ignore = ["E731", "E203", "W503"]
+
+[tool.mypy]
+ignore_missing_imports = true
+install_types = true
+non_interactive = true
+check_untyped_defs = true
+strict_optional = true
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["zatso"]
+omit = ["*/test/*"]
+concurrency = ["thread", "multiprocessing"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_also = [
+    "if __name__ == \"__main__\":",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["zatso"]
+addopts = "--doctest-modules --doctest-glob=*.test --doctest-glob=*.tests"
+doctest_optionflags = ["ELLIPSIS", "NORMALIZE_WHITESPACE"]
+
+[tool.bumpver]
+current_version = "0.1.14"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "Bump version: {old_version} → {new_version}"
+tag_message = "Release {new_version}"
+
+[tool.bumpver.file_patterns]
+"zatso/__init__.py" = [ '__version__ = "{version}"$' ]
+"pyproject.toml" = [ 'version = "{version}"$' ]
+
+[project.scripts]
+zcl = "zatso.__main__:main"
