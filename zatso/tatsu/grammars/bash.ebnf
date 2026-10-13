@@ -1,3 +1,5 @@
+@@whitespace :: /[ \t]+/
+
 source = module ;
 
 shebang = '#!' command;

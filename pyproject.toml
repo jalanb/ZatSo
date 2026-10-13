@@ -28,6 +28,7 @@ dependencies = [
     "pym",
     "rich",
     "stackprinter",
+    "tatsu",
     "textual",
 ]
 
@@ -105,9 +106,11 @@ envlist = [
 
 [tool.tox.env.formats]
 deps = [".[lint]"]
+allowlist_externals = ["fd"]
 commands = [
+    ["fd", "-e", "ebnf", ".", "zatso/tatsu/grammars", "-X", "bash", "-c", "for f in \"$@\"; do tatsu \"$f\" -o \"zatso/tatsu/parsers/$(basename \"${f%.ebnf}\").py\"; done", "_"],
     ["black", "-S", "."],
-    ["blackdoc", "-S", "--include", "[.](md|py|test)", "--exclude", ".*\\.swp$", "."],
+    ["blackdoc", "-S", "--include", "[.](md|test|py)$", "--exclude", ".*\\.swp$", "."],
     ["isort", "zatso"],
 ]
 
@@ -115,10 +118,10 @@ commands = [
 deps = [".[lint]"]
 commands = [
     ["black", "-S", "--check", "."],
-    ["blackdoc", "-S", "--include", "[.](md|py|test)", "--check", "."],
+    ["blackdoc", "-S", "--include", "[.](md|test|py)$", "--check", "."],
     ["isort", "--check-only", "zatso"],
-    ["flake8", "zatso"],
-    ["mypy", "--ignore-missing-imports", "--install-types", "--non-interactive", "zatso"],
+    ["flake8", "--extend-exclude", "tatsu", "zatso"],
+    ["mypy", "--exclude", "tatsu", "--ignore-missing-imports", "--install-types", "--non-interactive", "zatso"],
 ]
 
 [tool.tox.env.tests]

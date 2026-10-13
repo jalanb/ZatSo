@@ -5,11 +5,9 @@ from pysyte.types.paths import path
 
 def make_parse_function(module):
     def parse_function(filename):
-        parser = Parser()
-        p = path(filename)
-        return parser.parse(p.text(), filename=filename)
+        return parser.parse(path(filename).text(), filename=filename)
 
-    Parser = getattr(module, 'Parser')
+    parser = module.Parser()
     return parse_function
 
 
@@ -30,5 +28,6 @@ def on_import():
         globals()[module_name] = parse_function
         result.append(module_name)
     return result
+
 
 __all__ = on_import()
