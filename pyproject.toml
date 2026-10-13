@@ -24,7 +24,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "pysyte>=0.8.74",
+    "pysyte>=0.8.71",
     "pym",
     "rich",
     "stackprinter",
