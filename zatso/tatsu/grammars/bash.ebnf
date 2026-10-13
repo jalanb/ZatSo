@@ -34,7 +34,7 @@ short_option = '-' letter ;
 
 statements = {statement}+ ;
 
-function = '{word}' '(' ')' '{' '{word}+' '}' ;
+function = word '(' ')' '{' statements '}' ;
 
 functions = {function}+ ;
 

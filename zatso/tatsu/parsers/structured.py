@@ -72,6 +72,7 @@ class TestParser(Parser):
 
         def block0():
             self._section_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -79,6 +80,7 @@ class TestParser(Parser):
 
         def block0():
             self._words_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -86,6 +88,7 @@ class TestParser(Parser):
 
         def block0():
             self._word_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
@@ -93,6 +96,7 @@ class TestParser(Parser):
 
         def block0():
             self._namer_()
+
         self._positive_closure(block0)
 
     @tatsumasu()
