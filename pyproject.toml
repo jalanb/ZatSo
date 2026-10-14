@@ -7,13 +7,13 @@ name = "zatso"
 version = "0.1.14"
 description = " ䷃ ZatSo reads 竜 TatSu objects"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = "<=3.12"
 license = {text = "MIT License"}
 authors = [
     {name = "jalanb", email = "github@al-got-rhythm.net"}
 ]
 classifiers = [
-    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.11",
     "Development Status :: 1 - Just an idea",
     "Natural Language :: English",
     "Environment :: Console",
@@ -98,10 +98,6 @@ envlist = [
     "formats",
     "lints",
     "tests",
-    "devs",
-    "patch",
-    "minor",
-    "major",
 ]
 
 [tool.tox.env.formats]
