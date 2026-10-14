@@ -1,3 +1,5 @@
+source = words ;
+
 words = {word}+ ;
 
 word = letters ;

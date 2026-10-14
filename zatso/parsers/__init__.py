@@ -3,9 +3,9 @@ import importlib
 from pysyte.types.paths import path
 
 
-def make_parse_function(module):
+def make_parse_function(module, start="source"):
     def parse_function(filename):
-        return parser.parse(path(filename).text(), filename=filename)
+        return parser.parse(path(filename).text(), start=start, filename=filename)
 
     parser = module.Parser()
     return parse_function
