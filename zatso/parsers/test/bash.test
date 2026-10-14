@@ -1,23 +1,12 @@
-zatso.parses.bash
-=================
+The zatso.parsers package
+=========================
 
-    >>> from zatso.parsers import bash
-    >>> assert bash.__doc__
+    >>> from zatso import parsers
 
     >>> from pysyte.types import paths
 
-Parse ~/.bashrc
----------------
+    >>> path_to_package = paths.path(parsers).parent
+    >>> path_to_bash_source = path_to_package / 'test/bash.sh'
+    >>> zatso_bash = parsers.bash(path_to_bash_source)
+    >>> assert zatso_bash
 
-    >>> p = paths.bashrc
-    >>> assert p.name == '.bashrc'
-    >>> assert p.isfile()
-
-Real test is here:
-    can it parse bash sources?
-
-    >>> ast = parsers.bash.parse(p)
-
-This is a guess, and likely only works for me
-
-    >>> assert "bashrc" in ast.functions

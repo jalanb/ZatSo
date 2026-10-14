@@ -1,7 +1,9 @@
+source = words ;
+
 words = {word}+ ;
 
 word = letters ;
 
 letters = {letter}+ ;
 
-letter = /a-zA-Z/ ;
+letter = /[a-zA-Z]/ ;
